@@ -8,15 +8,22 @@ plugins {
     // Kotlin support
     id("org.jetbrains.kotlin.jvm") version "1.7.10"
     // Gradle IntelliJ Plugin
-    id("org.jetbrains.intellij") version "1.8.0"
+    id("org.jetbrains.intellij") version "1.0"
     // Gradle Changelog Plugin
     id("org.jetbrains.changelog") version "1.3.1"
     // Gradle Qodana Plugin
     id("org.jetbrains.qodana") version "0.1.13"
+    // detekt linter - read more: https://detekt.github.io/detekt/gradle.html
+    id("io.gitlab.arturbosch.detekt") version "1.17.1"
+    // ktlint linter - read more: https://github.com/JLLeitschuh/ktlint-gradle
+    id("org.jlleitschuh.gradle.ktlint") version "10.0.0"
 }
 
 group = properties("pluginGroup")
 version = properties("pluginVersion")
+if (!hasProperty("StudioCompilePath")) {
+    throw GradleException("No StudioCompilePath value was set, please create gradle.properties file")
+}
 
 // Configure project's dependencies
 repositories {
@@ -35,9 +42,8 @@ intellij {
     pluginName.set(properties("pluginName"))
     version.set(properties("platformVersion"))
     type.set(properties("platformType"))
-    
-    intellij.localPath.set(properties("StudioRunPath"))
 
+    intellij.localPath.set(properties("StudioRunPath"))
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins.set(properties("platformPlugins").split(',').map(String::trim).filter(String::isNotEmpty))
 }
@@ -57,6 +63,10 @@ qodana {
 }
 
 tasks {
+    instrumentCode {
+        compilerVersion.set("213.7172.25")
+    }
+
     wrapper {
         gradleVersion = properties("gradleVersion")
     }
