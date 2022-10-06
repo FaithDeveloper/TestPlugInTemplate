@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.faithdeveloper.testplugintemplate.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.faithdeveloper.testplugintemplate.MyBundle
 
 class MyApplicationService {
 
