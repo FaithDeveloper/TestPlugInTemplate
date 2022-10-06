@@ -5,10 +5,21 @@
     <vendor>faithdeveloper</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <!-- 우리가 사용할 디펜던시를 정의합니다. -->
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.faithdeveloper.testplugintemplate.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.faithdeveloper.testplugintemplate.services.MyProjectService"/>
+    </extensions>
+    
+     <!-- WizardTemplateProviderImpl 파일을 생성해줍니다. 해당 클래스에서 실행될 template 을 정의할 예정입니다. -->
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="com.github.test.template.WizardTemplateProviderImpl" />
     </extensions>
 
     <applicationListeners>
