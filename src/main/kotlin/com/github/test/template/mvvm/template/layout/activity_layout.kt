@@ -15,7 +15,7 @@ fun createRecyclerActivityLayout(
 
             <variable
                 name="viewModel"
-                type="$packageName.${className}ViewModel" />
+                type="$packageName.${className}.viewmodel.ViewModel" />
 
         </data>
 

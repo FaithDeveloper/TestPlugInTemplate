@@ -4,7 +4,7 @@ fun createRecyclerAdapter(
     packageName: String,
     className: String
 ) = """
-package $packageName
+package $packageName.adapter
 import androidx.recyclerview.widget.RecyclerView
 
 class ${className}RecyclerAdapter() :

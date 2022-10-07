@@ -4,9 +4,9 @@ fun createViewHolder(
     packageName: String,
     className: String
 ) = """
-package $packageName
+package $packageName.viewholder
 import androidx.recyclerview.widget.RecyclerView
-import com.kcs.testapplication.databinding.Item${className}Binding
+import ${packageName}.databinding.Item${className}Binding
     
 class ${className}ItemViewHolder(val binding: Item${className}Binding)
  : RecyclerView.ViewHolder(binding.root)

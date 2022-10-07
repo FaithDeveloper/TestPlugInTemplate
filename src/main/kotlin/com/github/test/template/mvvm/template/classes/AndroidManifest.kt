@@ -1,12 +1,18 @@
 package com.github.test.template.mvvm.template.classes
 
-fun manifestTemplateXml(packageName: String, activityClassName: String) = """
+import com.android.tools.idea.wizard.template.ProjectTemplateData
+
+fun manifestTemplateXml(projectData: ProjectTemplateData, packageName: String, activityClassName: String) = """
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
-package="com.kcs.testapplication">
+package="${projectData.applicationPackage}">
 
     <application>
-        <activity android:name="$packageName.$activityClassName"/>   
+    
+        <activity 
+            android:name="$packageName.$activityClassName"
+            />  
+             
     </application>
 </manifest>
         """

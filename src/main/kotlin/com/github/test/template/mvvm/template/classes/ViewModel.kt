@@ -4,7 +4,7 @@ fun createViewModel(
     packageName: String,
     className: String
 ) = """
-package $packageName
+package $packageName.viewmodel
 import androidx.lifecycle.ViewModel
 
 class ${className}ViewModel() : ViewModel() {

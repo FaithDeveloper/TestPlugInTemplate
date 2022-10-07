@@ -11,7 +11,7 @@ val defaultPackageNameParameter
     get() = stringParameter {
         name = "Package name"
         visible = { !isNewModule }
-        default = "com.kcs.testapplication" //기본 패키지명
+        default = "com.kcs.hello" //기본 패키지명
         constraints = listOf(Constraint.PACKAGE)
         suggest = { packageName }
     }
@@ -22,7 +22,9 @@ fun String.save(srcDir: PsiDirectory, subDirPath: String, fileName: String) {
         val psiFile = PsiFileFactory
             .getInstance(srcDir.project)
             .createFileFromText(fileName, KotlinLanguage.INSTANCE, this)
-        destDir.add(psiFile)
+        if(destDir.findFile(fileName) == null) {
+            destDir.add(psiFile)
+        }
     } catch (exc: Exception) {
         exc.printStackTrace()
     }

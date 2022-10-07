@@ -5,9 +5,9 @@ import com.github.test.template.extensions.*
 
 val recyclerActivitySetupTemplate
     get() = template {
-        name = "Test RecyclerView Activity"
-        description = "리사이클러뷰 액티비티"
-        minApi = 16
+        name = "MVVM RecyclerView Activity"
+        description = "This Template make RecyclerView Template with MVVM Architecture."
+        minApi = 21
         category = Category.Other // Check other categories
         formFactor = FormFactor.Mobile
         screens = listOf(
@@ -18,15 +18,15 @@ val recyclerActivitySetupTemplate
         val packageNameParam = defaultPackageNameParameter
         val className = stringParameter {
             name = "Class Name"
-            default = "Titie"
-            help = "액티비티 생성 시 사용"
+            default = "" //ex) default = "RecyclerViewActivity"
+            help = "Please, Input Class Name."
             constraints = listOf(Constraint.NONEMPTY)
         }
 
         val activityLayoutName = stringParameter {
-            name = "Activity Layout Name"
-            default = "Titie"
-            help = "액티비티 레이아웃 생성 시 사용"
+            name = "Activity Layout Name."
+            default = "" //ex) default = "RecyclerView"
+            help = "Please, Input Layout Name"
             constraints = listOf(Constraint.LAYOUT, Constraint.UNIQUE, Constraint.NONEMPTY)
             suggest = { activityToLayout(className.value.toSnakeCase()) }
         }
@@ -38,6 +38,7 @@ val recyclerActivitySetupTemplate
         )
 
         recipe = { data: TemplateData ->
+            // 텝플릿 생성
             mvvmRecyclerActivitySetup(
                 data as ModuleTemplateData,
                 packageNameParam.value,
