@@ -1,14 +1,17 @@
-package com.github.test.template.mvvm
+package com.github.faithdeveloper.testplugintemplate.mvvm
 
 import com.android.tools.idea.wizard.template.ModuleTemplateData
 import com.android.tools.idea.wizard.template.RecipeExecutor
 import com.android.tools.idea.wizard.template.impl.activities.common.addAllKotlinDependencies
-import com.github.test.template.extensions.save
-import com.github.test.template.extensions.toSnakeCase
-import com.github.test.template.listeners.MyProjectManagerListener.Companion.projectInstance
-import com.github.test.template.mvvm.template.classes.*
-import com.github.test.template.mvvm.template.layout.createRecyclerActivityLayout
-import com.github.test.template.mvvm.template.layout.createViewHolderLayout
+import com.github.faithdeveloper.testplugintemplate.extensions.save
+import com.github.faithdeveloper.testplugintemplate.extensions.toSnakeCase
+import com.github.faithdeveloper.testplugintemplate.listeners.MyProjectManagerListener.Companion.projectInstance
+import com.github.faithdeveloper.testplugintemplate.mvvm.template.classes.createRecyclerActivity
+import com.github.faithdeveloper.testplugintemplate.mvvm.template.classes.createRecyclerAdapter
+import com.github.faithdeveloper.testplugintemplate.mvvm.template.classes.createViewHolder
+import com.github.faithdeveloper.testplugintemplate.mvvm.template.classes.createViewModel
+import com.github.faithdeveloper.testplugintemplate.mvvm.template.layout.createRecyclerActivityLayout
+import com.github.faithdeveloper.testplugintemplate.mvvm.template.layout.createViewHolderLayout
 import com.intellij.openapi.roots.ProjectRootManager
 import com.intellij.psi.PsiManager
 

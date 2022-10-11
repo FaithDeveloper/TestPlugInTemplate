@@ -1,4 +1,4 @@
-package com.github.test.template.mvvm.template.classes
+package com.github.faithdeveloper.testplugintemplate.mvvm.template.classes
 
 import com.android.tools.idea.wizard.template.ProjectTemplateData
 

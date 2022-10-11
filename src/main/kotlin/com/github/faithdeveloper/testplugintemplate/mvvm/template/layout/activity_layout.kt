@@ -1,4 +1,4 @@
-package com.github.test.template.mvvm.template.layout
+package com.github.faithdeveloper.testplugintemplate.mvvm.template.layout
 
 fun createRecyclerActivityLayout(
     packageName: String,

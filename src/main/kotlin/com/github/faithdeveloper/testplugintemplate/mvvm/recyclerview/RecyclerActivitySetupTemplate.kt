@@ -1,7 +1,8 @@
-package com.github.test.template.mvvm
+package com.github.faithdeveloper.testplugintemplate.mvvm
 
 import com.android.tools.idea.wizard.template.*
-import com.github.test.template.extensions.*
+import com.github.faithdeveloper.testplugintemplate.extensions.defaultPackageNameParameter
+import com.github.faithdeveloper.testplugintemplate.extensions.toSnakeCase
 
 val recyclerActivitySetupTemplate
     get() = template {

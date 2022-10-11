@@ -1,4 +1,4 @@
-package com.github.test.template.mvvm.template.classes
+package com.github.faithdeveloper.testplugintemplate.mvvm.template.classes
 
 fun createViewHolder(
     packageName: String,
