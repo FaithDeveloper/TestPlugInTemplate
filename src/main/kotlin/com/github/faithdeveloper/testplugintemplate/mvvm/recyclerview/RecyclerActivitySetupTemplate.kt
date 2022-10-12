@@ -8,7 +8,7 @@ val recyclerActivitySetupTemplate
     get() = template {
         name = "MVVM RecyclerView Activity"
         description = "This Template make RecyclerView Template with MVVM Architecture."
-        minApi = 21
+        minApi = 19
         category = Category.Other // Check other categories
         formFactor = FormFactor.Mobile
         screens = listOf(

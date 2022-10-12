@@ -1,3 +1,4 @@
+<!-- Plugin description -->
 # Plugin Install
 
 Gradle Run Plugin을 실행하면 Build/libs 안에 jar 파일을 볼 수 있습니다.
@@ -12,3 +13,10 @@ Gradle Run Plugin 하는 방법은 여러방법이 있는데 쉽게 할 수 있�
 
 # PlugIn Example
 ![mvvm recyclerview template.gif](./doc/res/mvvm_recyclerview_template.gif)
+
+<!-- Plugin description end -->
+
+---
+Plugin based on the [IntelliJ Platform Plugin Template][template].
+
+[template]: https://github.com/JetBrains/intellij-platform-plugin-template
