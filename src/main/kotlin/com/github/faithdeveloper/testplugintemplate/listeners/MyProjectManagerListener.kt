@@ -1,10 +1,10 @@
 package com.github.faithdeveloper.testplugintemplate.listeners
 
 
-import com.github.faithdeveloper.testplugintemplate.services.MyProjectService
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
+import com.github.faithdeveloper.testplugintemplate.services.MyProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
 

@@ -12,18 +12,23 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.androidstudio</depends>
 
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.faithdeveloper.testplugintemplate.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.faithdeveloper.testplugintemplate.services.MyProjectService"/>
+        <toolWindow factoryClass="com.github.faithdeveloper.testplugintemplate.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
-    
-     <!-- WizardTemplateProviderImpl 파일을 생성해줍니다. 해당 클래스에서 실행될 template 을 정의할 예정입니다. -->
+
+    <!-- WizardTemplateProviderImpl 파일을 생성해줍니다. 해당 클래스에서 실행될 template 을 정의할 예정입니다. -->
     <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
         <wizardTemplateProvider implementation="com.github.faithdeveloper.testplugintemplate.WizardTemplateProviderImpl" />
     </extensions>
 
+<!--    <applicationListeners>-->
+<!--        <listener class="com.github.faithdeveloper.testplugintemplate.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>-->
+<!--    </applicationListeners>-->
+
     <applicationListeners>
         <listener class="com.github.faithdeveloper.testplugintemplate.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
+            topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>
