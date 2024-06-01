@@ -1,6 +1,16 @@
 package com.github.faithdeveloper.testplugintemplate.mvvm
 
-import com.android.tools.idea.wizard.template.*
+import com.android.tools.idea.wizard.template.Category
+import com.android.tools.idea.wizard.template.Constraint
+import com.android.tools.idea.wizard.template.FormFactor
+import com.android.tools.idea.wizard.template.ModuleTemplateData
+import com.android.tools.idea.wizard.template.PackageNameWidget
+import com.android.tools.idea.wizard.template.TemplateData
+import com.android.tools.idea.wizard.template.TextFieldWidget
+import com.android.tools.idea.wizard.template.WizardUiContext
+import com.android.tools.idea.wizard.template.activityToLayout
+import com.android.tools.idea.wizard.template.stringParameter
+import com.android.tools.idea.wizard.template.template
 import com.github.faithdeveloper.testplugintemplate.extensions.defaultPackageNameParameter
 import com.github.faithdeveloper.testplugintemplate.extensions.toSnakeCase
 
